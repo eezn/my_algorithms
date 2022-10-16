@@ -2,6 +2,7 @@ package sort;
 
 import sort.basic.Bubble;
 import sort.basic.Insertion;
+import sort.basic.Selection;
 
 import java.util.Arrays;
 
@@ -49,8 +50,8 @@ public class Test {
         originalData = createRandomData(DYNAMIC_DATA_START, DYNAMIC_DATA_SIZE);
         copy = originalData.clone();
 
-        Insertion.sort(copy);
-//        Insertion.sort(copy, 0, 10);
+        Selection.sort(copy);
+//        Selection.sort(copy, 0, 10);
 
         printData(originalData);
         printData(copy);
