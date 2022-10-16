@@ -1,9 +1,5 @@
 package sort;
 
-import sort.basic.Bubble;
-import sort.basic.Insertion;
-import sort.basic.Selection;
-
 import java.util.Arrays;
 
 public class Test {
@@ -50,8 +46,7 @@ public class Test {
         originalData = createRandomData(DYNAMIC_DATA_START, DYNAMIC_DATA_SIZE);
         copy = originalData.clone();
 
-        Selection.sort(copy);
-//        Selection.sort(copy, 0, 10);
+        Merge.sort(copy);
 
         printData(originalData);
         printData(copy);
