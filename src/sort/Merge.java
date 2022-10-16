@@ -1,7 +1,6 @@
 package sort;
 
 import sort.basic.Insertion;
-import sort.basic.Selection;
 
 public class Merge {
 

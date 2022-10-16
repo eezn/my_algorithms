@@ -8,8 +8,8 @@ public class Test {
             13, 77, 49, 35, 61, 48, 73, 23, 95, 3, 89, 37, 57, 99, 17, 32, 94, 28, 15, 55, 7, 51, 88, 97, 62
     };
 
-    static final int DYNAMIC_DATA_START = 5;
-    static final int DYNAMIC_DATA_SIZE = 20;
+    static final int DYNAMIC_DATA_START = 0;
+    static final int DYNAMIC_DATA_SIZE = 10;
 
     private static int[] createRandomData(int start, int size) {
 
@@ -46,7 +46,7 @@ public class Test {
         originalData = createRandomData(DYNAMIC_DATA_START, DYNAMIC_DATA_SIZE);
         copy = originalData.clone();
 
-        Merge.sort(copy);
+        QuickMOT.sort(copy);
 
         printData(originalData);
         printData(copy);
