@@ -1,5 +1,7 @@
 package sort;
 
+import sort.basic.Bubble;
+
 import java.util.Arrays;
 
 public class Test {
@@ -33,14 +35,19 @@ public class Test {
 
     public static void main(String[] args) {
 
-        int[] data;
+        int[] originalData;
 
-//        data = STATIC_DATA;
-        data = createRandomData(DYNAMIC_DATA_START, DYNAMIC_DATA_SIZE);
+//        originalData = STATIC_DATA;
+        originalData = createRandomData(DYNAMIC_DATA_START, DYNAMIC_DATA_SIZE);
+
+        int[] copy = originalData.clone();
+
+        Bubble.sort(copy);
+//        Bubble.sort(copy, 0, 10);
 
         StringBuilder sb = new StringBuilder();
-        Arrays.stream(data).forEach(elem -> sb.append(elem).append(" "));
-        System.out.println("len: " + data.length);
+        Arrays.stream(copy).forEach(elem -> sb.append(elem).append(" "));
+        System.out.println("len: " + copy.length);
         System.out.println(sb);
     }
 }
